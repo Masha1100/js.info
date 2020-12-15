@@ -30,9 +30,9 @@ null + 1//Nan??? 1
 undefined + 1//nan!
 " \t \n" - 2 //-2!
 
-let a1 = prompt("First number?", 1);
-let b1 = prompt("Second number?", 2);
-console.log(+a1 + +b1); // 12
+// let a1 = prompt("First number?", 1);
+// let b1 = prompt("Second number?", 2);
+//console.log(+a1 + +b1); // 12
 // DATA TYPES END
 
 //COMPARISON
@@ -58,17 +58,64 @@ let resultNew = (a + b < 4)?'Below':'Over';
 
 let message;
 
-if (login == 'Employee') {
-  message = 'Hello';
-} else if (login == 'Director') {
-  message = 'Greetings';
-} else if (login == '') {
-  message = 'No login';
-} else {
-  message = '';
+// if (login == 'Employee') {
+//   message = 'Hello';
+// } else if (login == 'Director') {
+//   message = 'Greetings';
+// } else if (login == '') {
+//   message = 'No login';
+// } else {
+//   message = '';
+// }
+
+// let message2= (login == 'Employee') ? 'Hello':
+//     (login == 'Director') ? 'Greetings':
+//     (login == '') ? 'No login':
+//     '';
+
+// && and ||
+let age = 99;
+if(age<14 || age>90){
+  console.log(age);
 }
 
-let message= (login == 'Employee') ? 'Hello':
-    (login == 'Director') ? 'Greetings':
-    (login == '') ? 'No login':
-    '';
+let age2 = 909;
+if(!(age2<=14 && age2<=90)){
+  console.log(age2);
+}
+
+let login = prompt("Login", "");
+if(login=="" || login==null){
+  console.log("Canceled");
+}else if(login != "Admin"){
+  console.log("I don’t know you");
+}else {
+  let pass = prompt("Pass", "");
+  if(pass=="" || pass==null){
+    console.log("Canceled");
+  }else if(pass != "TheMaster"){
+    console.log("Wrong password");
+  }else {
+    console.log("Welcome");
+  }
+}//????????????
+
+let userName = prompt("Who's there?", '');
+
+if (userName === 'Admin') {
+
+  let pass = prompt('Password?', '');
+
+  if (pass === 'TheMaster') {
+    alert( 'Welcome!' );
+  } else if (pass === '' || pass === null) {
+    alert( 'Canceled' );
+  } else {
+    alert( 'Wrong password' );
+  }
+
+} else if (userName === '' || userName === null) {
+  alert( 'Canceled' );
+} else {
+  alert( "I don't know you" );
+}
