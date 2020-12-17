@@ -100,22 +100,43 @@ if(login=="" || login==null){
   }
 }//????????????
 
-let userName = prompt("Who's there?", '');
+// let userName = prompt("Who's there?", '');
 
-if (userName === 'Admin') {
+// if (userName === 'Admin') {
 
-  let pass = prompt('Password?', '');
+//   let pass = prompt('Password?', '');
 
-  if (pass === 'TheMaster') {
-    alert( 'Welcome!' );
-  } else if (pass === '' || pass === null) {
-    alert( 'Canceled' );
-  } else {
-    alert( 'Wrong password' );
+//   if (pass === 'TheMaster') {
+//     alert( 'Welcome!' );
+//   } else if (pass === '' || pass === null) {
+//     alert( 'Canceled' );
+//   } else {
+//     alert( 'Wrong password' );
+//   }
+
+// } else if (userName === '' || userName === null) {
+//   alert( 'Canceled' );
+// } else {
+//   alert( "I don't know you" );
+// }
+let i=0;
+while(i<=10){
+  if(i%2==0){
+    console.log(i);
   }
+  i++;
+}
 
-} else if (userName === '' || userName === null) {
-  alert( 'Canceled' );
-} else {
-  alert( "I don't know you" );
+for(let j=0; j<=10; j+=2){
+  console.log(j);
+}
+
+for (let i = 0; i < 3; i++) {
+  console.log( `number ${i}!` );
+}
+
+let l=0;
+while(l<3){
+  console.log( `number ${l}!` );
+  l++;
 }
