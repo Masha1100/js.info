@@ -140,3 +140,8 @@ while(l<3){
   console.log( `number ${l}!` );
   l++;
 }
+
+let num;
+do{
+  num=prompt("HJj",0);
+}while(num <= 100 && num)
