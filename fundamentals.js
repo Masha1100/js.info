@@ -141,7 +141,18 @@ while(l<3){
   l++;
 }
 
-let num;
-do{
-  num=prompt("HJj",0);
-}while(num <= 100 && num)
+// let num;
+// do{
+//   num=prompt("HJj",0);
+// }while(num <= 100 && num)
+
+let prime;
+let n = 10;
+nextPrime: for(let i=2; i<=n; i++){
+  console.log(i);
+  for(let j=2; j<i; j++){
+    console.log(j);
+    if (i % j == 0) continue nextPrime;
+  }
+  console.log("Prime" + i);
+}
