@@ -207,4 +207,5 @@ switch (a) {
     alert( 2,3 );
     break;
 }
+//functions
 
