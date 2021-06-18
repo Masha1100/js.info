@@ -173,13 +173,13 @@ nextPrime: for(let i=2; i<=n; i++){
 //   default:
 //     alert( 'We hope that this page looks ok!' );
 // }
-if(browser === 'Edge'){
-    alert( "You've got the Edge!" );
-} else if (browser === 'Chrome' || browser === 'Firefox' || browser === 'Safari' || browser === 'Opera') {
-    alert( 'Okay we support these browsers too' );
-}else{
-    alert( 'We hope that this page looks ok!' );
-}
+// if(browser === 'Edge'){
+//     alert( "You've got the Edge!" );
+// } else if (browser === 'Chrome' || browser === 'Firefox' || browser === 'Safari' || browser === 'Opera') {
+//     alert( 'Okay we support these browsers too' );
+// }else{
+//     alert( 'We hope that this page looks ok!' );
+// }
 
 // let a = +prompt('a?', '');
 
@@ -194,18 +194,72 @@ if(browser === 'Edge'){
 //   alert( '2,3' );
 // }
 
-let a = +prompt('a?', '');
-switch (a) {
-  case 0:
-    alert( 0 );
-    break;
-  case 1:
-    alert( 1 );
-    break;
-  case 2:
-  case 3:
-    alert( 2,3 );
-    break;
-}
+// let a = +prompt('a?', '');
+// switch (a) {
+//   case 0:
+//     alert( 0 );
+//     break;
+//   case 1:
+//     alert( 1 );
+//     break;
+//   case 2:
+//   case 3:
+//     alert( 2,3 );
+//     break;
+// }
 //functions
+function checkAge(age) {
+  if (age > 18) {
+    return true;
+  } else {
+    return confirm('Did parents allow you?');
+  }
+}
 
+function checkAge2(age){
+  return age > 18 ? true : confirm('Did parents allow you?');
+}
+console.log(checkAge2(15));
+
+function checkAge3(age) {
+    return (age > 18) || confirm('Did parents allow you?');
+}
+
+function min(a,b){
+  return (a < b) ? a : b;
+}
+
+let first = +prompt("Enter first number", 0);
+let second = +prompt('Enter second number');
+function pow (fir, sec) {
+  if(sec == 1){
+    return fir;
+  } else {
+    return fir * pow(fir, sec-1);
+  }
+}
+function pow2 (fir, sec) {
+  let res = fir;
+  for (let i = 1; i<sec; i++){
+    res = res*fir
+  }
+  return res;
+}
+console.log(pow2(first, second));
+if (n < 1) {
+  alert(`Power ${n} is not supported, use a positive integer`);
+} else {
+  alert( pow(x, n) );
+}
+
+//arrow function
+function ask(question, yes, no) {
+  if (confirm(question)) yes();
+  else no();
+}
+
+ask(
+  "Do you agree?",
+  () => alert("You agreed."),
+  () => alert("You canceled the execution.")
+);
