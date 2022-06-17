@@ -45,3 +45,31 @@ function multiplyNumeric(obj) {
 multiplyNumeric(menu);
 console.log(menu);  
 
+function makeUser() {
+    return {
+      name: "John",
+      ref: this
+    };
+  }
+  
+let userMake = makeUser();
+  
+console.log( userMake.ref.name );
+
+//simple calc
+let calc = {
+    read() {
+      this.num1 = +prompt("Write a number", 0);
+      this.num2 = +prompt("Write second number", 0);
+    },
+    sum() {
+      return this.num1 + this.num2;
+    },
+    mul() {
+      return this.num1 * this.num2;
+    }
+  }
+
+calc.read();
+alert( calc.sum() );
+alert( calc.mul() );
